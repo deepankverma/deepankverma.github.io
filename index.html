@@ -92,12 +92,12 @@
       max-width: 800px;
       margin: 0 auto;
     }
-    #projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
+    .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
     .project-card {
       background: white;
       border-radius: 0.5rem;
@@ -154,11 +154,50 @@
         flex-direction: column;
       }
     }
+
+    .education {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.timeline {
+  margin-top: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--primary-color);
+}
+
+.timeline-item {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.timeline-year {
+  font-family: var(--heading-font);
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.timeline-content p {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+}
+
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">🚌🗺️🤖⚡</div>
+    <div class="logo">🤖⚡</div>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -173,7 +212,7 @@
     <div class="hero-text">
       <h1>Deepank Verma, Dr</h1>
       <p>Currently working on <u> <b> Robotics and Agentic LLMs </b> </u> among other 😎 stuff.</p>
-      <a href="#projects" class="btn">View Projects</a>
+      <!-- <a href="#projects" class="btn">View Projects</a> -->
     </div>
     <div class="hero-image">
       <img src="source\photo_self.gif" alt="Photo">
@@ -181,38 +220,88 @@
   </section>
 
   <section id="about" class="about">
-    <h2>About Me</h2>
+    <h2>🧑🏽 About Me</h2>
     <p>Urban Scientist by training. Work almost daily with GIS, Remote Sensing, Cool AI Projects, Electronics and Hardware </p>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <article class="project-card">
-      <img src="thumb1.jpg" alt="Project One Thumbnail">
-      <div class="project-card-content">
-        <h3>Project One</h3>
-        <p>Short description of project one goes here. Briefly explain main features.</p>
-        <a href="project1.html">Learn more →</a>
+  <section id="education" class="education">
+    <h2>🎓 Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2020</div>
+        <div class="timeline-content">
+          <h3>Ph.D. in Urban Science</h3>
+          <p>Indian Institute of Technology Bombay</p>
+        </div>
       </div>
-    </article>
-    <article class="project-card">
-      <img src="thumb2.jpg" alt="Project Two Thumbnail">
-      <div class="project-card-content">
-        <h3>Project Two</h3>
-        <p>Short description of project two goes here. Briefly explain main features.</p>
-        <a href="project2.html">Learn more →</a>
+      <div class="timeline-item">
+        <div class="timeline-year">2016</div>
+        <div class="timeline-content">
+          <h3>Masters in City Planning</h3>
+          <p>Indian Institute of Technology Kharagpur</p>
+        </div>
       </div>
-    </article>
-    <article class="project-card">
-      <img src="thumb2.jpg" alt="Project Two Thumbnail">
-      <div class="project-card-content">
-        <h3>Project Three</h3>
-        <p>Short description of project two goes here. Briefly explain main features.</p>
-        <a href="project2.html">Learn more →</a>
+      <div class="timeline-item">
+        <div class="timeline-year">2014</div>
+        <div class="timeline-content">
+          <h3>Bachelors in Urban Planning</h3>
+          <p>School of Planning and Architecture Bhopal</p>
+        </div>
       </div>
-    </article>
-    <!-- Add more project cards as needed -->
+    </div>
   </section>
+  
+  <section id="projects">
+    <h2>🚧 Ongoing Projects</h2>
+    <div class="project-grid">
+      <article class="project-card">
+        <img src="source/placeholder.jpg" alt="Placeholder Thumbnail">
+        <div class="project-card-content">
+          <h3>Upcoming Project</h3>
+          <p>Details of ongoing research and development will be shared soon. Stay tuned!</p>
+          <a href="#">Coming Soon →</a>
+        </div>
+      </article>
+      <article class="project-card">
+        <img src="source/placeholder.jpg" alt="Placeholder Thumbnail">
+        <div class="project-card-content">
+          <h3>Upcoming Project2</h3>
+          <p>Details of ongoing research and development will be shared soon. Stay tuned!</p>
+          <a href="#">Coming Soon →</a>
+        </div>
+      </article>
+    </div>
+  
+    <h2 style="margin-top: 3rem;">✅ Past Projects</h2>
+    <div class="project-grid">
+      <article class="project-card">
+        <img src="source/P1_1.jpg" alt="Project One Thumbnail">
+        <div class="project-card-content">
+          <h3>CITYLID dataset</h3>
+          <p>Lidar and Street Network fused dataset for Urban research</p>
+          <a href="project1.html">Learn more →</a>
+        </div>
+      </article>
+      <article class="project-card">
+        <img src="thumb2.jpg" alt="Project Two Thumbnail">
+        <div class="project-card-content">
+          <h3>Project Two</h3>
+          <p>Drone-based data collection for environmental change detection.</p>
+          <a href="project2.html">Learn more →</a>
+        </div>
+      </article>
+      <article class="project-card">
+        <img src="thumb2.jpg" alt="Project Three Thumbnail">
+        <div class="project-card-content">
+          <h3>Project Three</h3>
+          <p>Simulation platform for smart mobility and autonomous navigation research.</p>
+          <a href="project3.html">Learn more →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  
+  
 
   <section id="contact">
     <h2>Contact</h2>
