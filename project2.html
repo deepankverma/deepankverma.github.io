@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project One – Deepank Verma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --primary-color: #111111;
+      --text-color: #333;
+      --body-font: 'Inter', sans-serif;
+      --heading-font: 'Space Mono', monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: var(--body-font);
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--heading-font);
+      color: var(--primary-color);
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    .btn-back {
+      display: inline-block;
+      margin-top: 1rem;
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      font-weight: 600;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 3rem;
+    }
+
+    .overview {
+  margin-bottom: 2rem; /* adjust as needed */
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Project One</h1>
+    <p><strong>Category:</strong> Street View imagery / Similarity</p>
+    <a href="index.html" class="btn-back">← Back to Main Site</a>
+  </header>
+
+  <section>
+    <h2>Overview</h2>
+    <p class="overview">This study introduces a set of tools to quantify 
+      visual similarity between urban neighbourhoods using
+       Google Street View imagery and deep learning techniques. 
+       It applies semantic segmentation and generative inpainting
+        to preprocess and enhance street-level images, then employs 
+        the LPIPS perceptual metric to compute pairwise similarity 
+        and generate spatial similarity maps, providing empirical 
+        evidence on how visual sameness affects urban identity and 
+        monotony. 
+      </p>
+
+    <h2>Key Features</h2>
+    <ul>
+      <li>Leverages Google Street View imagery for high-resolution, street-level visual data.</li>
+      <li>Utilizes semantic segmentation deep-learning models to parse scene components into meaningful classes.</li>
+      <li>Applies generative inpainting to refine occluded or missing regions in street-view images.</li>
+      <li>Computes perceptual similarity using the LPIPS deep-learning-based metric.</li>
+      <li>Generates LPIPS-based similarity maps to quantitatively compare neighbourhoods.</li>
+      <li>Provides empirical insights into urban identity, monotony, and their potential health impacts.</li>
+    </ul>
+
+    <h2>Gallery</h2>
+    <img src="source\P2_1.jpg" alt="Screenshot or photo of Project Two" />
+    <img src="source\P2_2.jpg" alt="Screenshot or photo of Project Two" />
+
+    <h2>Technologies/Data Used</h2>
+    <p>Street View Imagery, LPIPS, Deep Learning.</p>
+
+
+<h2>Resources</h2>
+<ul>
+  <!-- <li><a href="https://huggingface.co/datasets/Deepank/CITYLID" target="_blank">🔗 GitHub Repository</a></li> -->
+  <li><a href="https://www.tandfonline.com/doi/full/10.1080/13574809.2024.2357804" target="_blank">📄 Research Publication</a></li>
+</ul>
+
+  </section>
+
+  <footer>
+    &copy; 2025 Deepank Verma
+  </footer>
+</body>
+</html>

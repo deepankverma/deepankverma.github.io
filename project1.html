@@ -64,6 +64,10 @@
       color: #666;
       margin-top: 3rem;
     }
+
+    .overview {
+  margin-bottom: 2rem; /* adjust as needed */
+}
   </style>
 </head>
 <body>
@@ -75,32 +79,35 @@
 
   <section>
     <h2>Overview</h2>
-    <p>This project provides a methodical framework to create the CITYLID dataset, which uses an openly available citywide aerial Lidar dataset, categorizes it with standard urban classes such as buildings, trees, and ground, and fuses with it detailed street features information such as driveways, medians, bikepaths, walkways, and on-street parking.</p>
+    <p class="overview">The CITYLID project delivers a richly annotated, large-scale urban LiDAR dataset to support precise urban planning and design. At its core, it transforms raw, uncategorized citywide aerial LiDAR point clouds into a semantically meaningful resource by systematically labeling data points and enriching them with street‐ and shadow‐related information. 
+       Through this methodical framework, the raw point clouds are first classified into standard urban categories—buildings, trees, and ground—before being fused with detailed street‐feature data such as driveways, medians, bikepaths, walkways, and on-street parking. 
+       Leveraging the inherent height information in LiDAR, the project also generates shadow maps via solar‐radiation modeling and seamlessly integrates them back into the point clouds, yielding a comprehensive three-dimensional urban representation. 
+       Beyond the dataset itself, CITYLID offers full transparency of its workflow: detailed documentation outlines each step of the LiDAR categorization process, and starter code is provided to extract relevant subsets of the point clouds. 
+       This combination of semantic labels, street‐level features, and shadow information—packaged with methodological guidelines—makes CITYLID a versatile tool for a range of urban analyses, from street cross-section studies to neighborhood‐scale comparisons and urban tree inventories. 
+      </p>
 
     <h2>Key Features</h2>
     <ul>
-      <li>Real-time spatial data processing with GIS integration</li>
-      <li>Language-guided robotics behaviors using LLMs</li>
-      <li>Sensor fusion and environmental awareness</li>
-      <li>Modular architecture for extensibility</li>
+      <li>Utilizes citywide aerial LiDAR data for high-resolution 3D urban coverage.</li>
+      <li>Applies point-cloud classification algorithms to label points as buildings, trees, or ground.</li>
+      <li>Augments data with street-level features: driveways, medians, bikepaths, walkways, and on-street parking.</li>
+      <li>Integrates solar radiation modeling to generate and embed shadow raster maps within the point cloud.</li>
+      <li>Delivers 13 distinct classes combining 3 urban, 5 street, and 5 shadow categories for comprehensive analysis.</li>
+      <li>Provides detailed methodology and Python-based starter code for extracting and manipulating point cloud subsets.</li>
+      <li>Leverages digital surface modeling and GIS techniques to derive precise height and spatial structure information.</li>
     </ul>
 
     <h2>Gallery</h2>
     <img src="source\P1_1.jpg" alt="Screenshot or photo of Project One" />
 
-    <h2>Technologies Used</h2>
-    <p>Python, ROS, OpenCV, GPT-based LLM APIs, QGIS, Jetson Nano, custom PCB sensors.</p>
+    <h2>Technologies/Data Used</h2>
+    <p>Python, Lidar datasets, Urban Street Networks.</p>
 
-    <h2>My Role</h2>
-    <p>I designed the system architecture, implemented core control logic, and handled LLM-in-the-loop integration with edge hardware.</p>
-
-    <h2>Outcome</h2>
-<p>This prototype successfully demonstrated dynamic language-driven task execution in semi-structured indoor settings.</p>
 
 <h2>Resources</h2>
 <ul>
-  <li><a href="https://github.com/deepankverma/project-one" target="_blank">🔗 GitHub Repository</a></li>
-  <li><a href="https://doi.org/10.xxxx/project-one-paper" target="_blank">📄 Research Publication</a></li>
+  <li><a href="https://huggingface.co/datasets/Deepank/CITYLID" target="_blank">🔗 GitHub Repository</a></li>
+  <li><a href="https://journals.sagepub.com/doi/10.1177/23998083241312273" target="_blank">📄 Research Publication</a></li>
 </ul>
 
   </section>

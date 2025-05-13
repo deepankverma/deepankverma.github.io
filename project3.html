@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project One – Deepank Verma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --primary-color: #111111;
+      --text-color: #333;
+      --body-font: 'Inter', sans-serif;
+      --heading-font: 'Space Mono', monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: var(--body-font);
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--heading-font);
+      color: var(--primary-color);
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    .btn-back {
+      display: inline-block;
+      margin-top: 1rem;
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      font-weight: 600;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 3rem;
+    }
+
+    .overview {
+  margin-bottom: 2rem; /* adjust as needed */
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Project One</h1>
+    <p><strong>Category:</strong> LLM / Street view Imagery</p>
+    <a href="index.html" class="btn-back">← Back to Main Site</a>
+  </header>
+
+  <section>
+    <h2>Overview</h2>
+    <p class="overview">This study employs generative agents built on 
+      large language models to simulate human perception and movement 
+      in urban environments using street-view imagery; agents are endowed
+       with virtual personalities, memory modules, and custom movement 
+       and visual inference components to plan journeys and rate 
+       locations on safety and liveliness, demonstrating a novel 
+       AI-driven framework for urban perception experiments. 
+      </p>
+
+    <h2>Key Features</h2>
+    <ul>
+      <li>Agents driven by large language models to generate human-like behaviors and decisions in urban contexts.</li>
+      <li>Fetches Google Street View imagery via the GSV API for real-world environmental input into agent simulations. </li>
+      <li>Custom movement module navigates a bidirectional graph of street nodes, while a visual inference module uses transformer-based segmentation models to extract scene details. </li>
+      <li>Implements a memory database that stores observations with salience scoring (importance, recency) for retrieval during planning and reflection. </li>
+      <li>Ten distinct agent profiles with 150-word backstories auto-generated via ChatGPT-3.5 to introduce variability in decision-making.</li>
+      <li>Agents rate encountered scenes on dimensions like safety and liveliness, yielding quantitative urban perception metrics.</li>
+      <li>Built on the LangChain library, providing modular functions for LLM orchestration, memory, movement, and visual processing.</li>
+    </ul>
+
+    <h2>Gallery</h2>
+    <img src="source\P3_1.jpg" alt="Screenshot or photo of Project 3" />
+    <img src="source\P3_2.jpg" alt="Screenshot or photo of Project 3" />
+    <img src="source\P3_3.jpg" alt="Screenshot or photo of Project 3" />
+    
+    <h2>Technologies/Data Used</h2>
+    <p>Large Language Models, Street View Imagery</p>
+
+
+<h2>Resources</h2>
+<ul>
+  <li><a href="https://github.com/deepankverma/gen_agent_langchain" target="_blank">🔗 GitHub Repository</a></li>
+  <li><a href="https://arxiv.org/pdf/2312.13126" target="_blank">📄 Research Publication</a></li>
+</ul>
+
+  </section>
+
+  <footer>
+    &copy; 2025 Deepank Verma
+  </footer>
+</body>
+</html>
