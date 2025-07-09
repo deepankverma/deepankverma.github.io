@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deepank Verma</title>
+  <link rel="icon" href="source\favicon-32x32.png" type="image/x-icon">
+
   <!-- Google Fonts: Body + Heading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -193,11 +195,93 @@
   font-size: 0.95rem;
 }
 
+.recent-updates {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* make the feed scrollable */
+.updates-container {
+  max-height: 300px;         /* adjust height as needed */
+  overflow-y: auto;
+  padding-right: 0.5rem;     /* space for scrollbar */
+}
+
+/* individual update styling */
+.update-item {
+  border-bottom: 1px solid #eee;
+  padding: 0.75rem 0;
+}
+.update-time {
+  font-family: var(--heading-font);
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.logo img {
+  display: block;
+  width: 1.5rem;     /* adjust size to match your header */
+  height: auto;      /* maintain aspect ratio */
+}
+
+/* Networking & Engagements */
+.networking {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.networking h2 {
+  margin-bottom: 1rem;
+}
+
+.engagements-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+}
+
+.engagements-slider .slide {
+  flex: 0 0 auto;
+  width: 240px;           /* adjust thumbnail width */
+  margin-right: 1rem;
+  scroll-snap-align: start;
+}
+
+.engagements-slider .slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+.engagements-slider .caption {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">🤖⚡</div>
+    <div class="logo">
+  <img
+    src="source\favicon-32x32.png"
+    alt="Site Logo"
+    width="32"
+    height="32"
+  >
+</div>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -211,7 +295,7 @@
   <section class="hero">
     <div class="hero-text">
       <h1>Deepank Verma, Dr</h1>
-      <p>Currently working on <u> <b> Robotics and Agentic LLMs </b> </u> among other 😎 stuff.</p>
+      <p>Interested in learning new ways to understand us and cities.</p>
       <!-- <a href="#projects" class="btn">View Projects</a> -->
     </div>
     <div class="hero-image">
@@ -220,39 +304,31 @@
   </section>
 
   <section id="about" class="about">
-    <h2>🧑🏽 About Me</h2>
-    <p>Urban Scientist by training. Work almost daily with GIS, Remote Sensing, Cool AI Projects, Electronics and Hardware </p>
+    <h2>About Me</h2>
+    <p>Urban Scientist by training. Currently engaged in research related to AI Projects, GIS, Urban Design and Planning methods, Citizen Science, and  Electronics and Hardware. </p>
   </section>
 
-  <section id="education" class="education">
-    <h2>🎓 Education</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-year">2020</div>
-        <div class="timeline-content">
-          <h3>Ph.D. in Urban Science</h3>
-          <p>Indian Institute of Technology Bombay</p>
-        </div>
+
+    <section id="recent-updates" class="recent-updates">
+    <h2>Recent Updates</h2>
+    <div class="updates-container">
+            <div class="update-item">
+        <div class="update-time">June 23, 2025</div>
+        <p>Started user perception studies @SpACE Lab aiming at modes of stimuli presentation.</p>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2016</div>
-        <div class="timeline-content">
-          <h3>Masters in City Planning</h3>
-          <p>Indian Institute of Technology Kharagpur</p>
-        </div>
+      <div class="update-item">
+        <div class="update-time">June 9, 2025</div>
+        <p>Published a paper on <a href="https://www.tandfonline.com/doi/full/10.1080/13574809.2025.2514574?src=exp-la" target="_blank" rel="noopener">
+      GenAI agents and their use in Urban Design research</a>.
+  </p>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2014</div>
-        <div class="timeline-content">
-          <h3>Bachelors in Urban Planning</h3>
-          <p>School of Planning and Architecture Bhopal</p>
-        </div>
-      </div>
+
+      <!-- add as many .update-item blocks as you like -->
     </div>
   </section>
   
   <section id="projects">
-    <h2>🚧 Ongoing Projects</h2>
+    <h2>Ongoing Projects</h2>
     <div class="project-grid">
       <article class="project-card">
         <img src="source/O1_1.jpg" alt="Placeholder Thumbnail">
@@ -272,7 +348,7 @@
       </article>
     </div>
   
-    <h2 style="margin-top: 3rem;">✅ Past Projects</h2>
+    <h2 style="margin-top: 3rem;">Past Projects</h2>
     <div class="project-grid">
       <article class="project-card">
         <img src="source/P1_1.jpg" alt="Project One Thumbnail">
@@ -301,7 +377,26 @@
     </div>
   </section>
   
-  
+  <!-- Networking & Engagements Section -->
+<section id="networking" class="networking">
+  <h2>Networking &amp; Engagements</h2>
+  <div class="engagements-slider">
+    <div class="slide">
+      <img src="source\networking\20241015_110150.jpg" alt="Tongji University Collaboration">
+      <p class="caption">In Shanghai for TU-Braunschweig and Tongji University Collaboration.</p>
+    </div>
+    <div class="slide">
+      <img src="source\networking\20250211_194651.jpg" alt="Bowling Alley">
+      <p class="caption">ISU SpACE Lab day out at Bowling Alley.</p>
+    </div>
+    <div class="slide">
+      <img src="source\networking\20250320_170828.jpg" alt="TU Dresden CRC Grant Final Presentation">
+      <p class="caption">At TU Dresden for final day at CRC Grant Final Presentation.</p>
+    </div>
+    <!-- Add more .slide blocks as needed -->
+  </div>
+</section>
+
 
   <section id="contact">
     <h2>Contact</h2>
